@@ -56,9 +56,9 @@ function procesarFormulario(evento) {
     } while (posicion < numeros.length && numero !== -1);
 
     if (cantidadValidos === 0) {
-        mensaje.textContent = "No se registraron numeros validos.";
+        mensaje.textContent = "No se registraron números válidos.";
     } else {
-        mensaje.textContent = huboInvalido ? "Se omitieron los valores invalidos." : "Analisis completado.";
+        mensaje.textContent = huboInvalido ? "Se omitieron los valores inválidos." : "Análisis completado.";
         paresTexto.textContent = cantidadPares;
         sumaParesTexto.textContent = sumaPares;
         imparesTexto.textContent = cantidadImpares;

@@ -23,7 +23,7 @@ function procesarFormulario(evento) {
         let fila = document.createElement("li");
 
         if (Number.isNaN(horas) || Number.isNaN(valorHora) || horas <= 0 || valorHora <= 0) {
-            fila.textContent = "Empleado " + e + ": datos invalidos; no se calculo el pago.";
+            fila.textContent = "Empleado " + e + ": datos inválidos; no se calculó el pago.";
         } else {
             let pago = 0;
             if (horas > 40) {

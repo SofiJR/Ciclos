@@ -33,13 +33,13 @@ function procesarFormulario(evento) {
             mejorDia = dia;
         }
         let fila = document.createElement("li");
-        fila.textContent = "Dia " + dia + ": $" + venta.toLocaleString("es-CO");
+        fila.textContent = "Día " + dia + ": $" + venta.toLocaleString("es-CO");
         detalleDias.appendChild(fila);
     }
     let promedio = total / 7;
     totalVendidoTexto.textContent = "$" + total.toLocaleString("es-CO");
     promedioTexto.textContent = "$" + promedio.toLocaleString("es-CO", { maximumFractionDigits: 0 });
-    mejorDiaTexto.textContent = "Dia " + mejorDia;
+    mejorDiaTexto.textContent = "Día " + mejorDia;
     diasAltosTexto.textContent = diasAltos;
     if (promedio > 400000) {
         mensaje.textContent = "Rendimiento excelente.";
@@ -49,6 +49,6 @@ function procesarFormulario(evento) {
         mensaje.textContent = "Rendimiento bajo.";
     }
     if (huboInvalido) {
-        mensaje.textContent += " Las ventas negativas o invalidas se contaron como 0.";
+        mensaje.textContent += " Las ventas negativas o inválidas se contaron como 0.";
     }
 }

@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --fondo: #f7f7fc;
+  --blanco: #ffffff;
+  --texto: #29283a;
+  --suave: #77758b;
+  --primario: #7567c8;
+  --primario-oscuro: #5e52ad;
+  --lila: #efedfb;
+  --borde: #e8e6f2;
+  --sombra: 0 10px 30px rgba(54, 46, 100, .07);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 34px 20px 60px;
+  background: radial-gradient(circle at top left, #f0efff 0, transparent 34%), var(--fondo);
+  color: var(--texto);
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  line-height: 1.65;
+}
+header, main {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+header {
+  padding: 30px 34px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #fff 0%, #f1efff 100%);
+  border: 1px solid var(--borde);
+  border-radius: 22px;
+  box-shadow: var(--sombra);
+}
+header a {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--primario-oscuro);
+  text-decoration: none;
+  font-weight: 800;
+}
+h1 {
+  margin: 0 0 7px;
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -.6px;
+}
+header p { margin: 8px 0 0; color: var(--suave); }
+#etiquetas {
+  display: inline-block;
+  padding: 5px 13px;
+  margin-top: 13px;
+  border-radius: 30px;
+  background: var(--lila);
+  color: var(--primario-oscuro);
+  font-size: .88rem;
+  font-weight: 800;
+}
+section, body > form, body > ul, body > p {
+  width: min(900px, 100%);
+  margin: 18px auto;
+  padding: 25px 28px;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+}
+h2 { margin: 0 0 12px; font-size: 1.25rem; }
+p { margin-top: 8px; }
+ul { padding-left: 22px; }
+li { padding-left: 3px; margin: 5px 0; }
+#enunciado { border-left: 4px solid #b9b1ef; }
+#controles { background: #fff; }
+#resultado { background: #fbfaff; }
+#resultado h2 { color: var(--primario-oscuro); }
+#mensaje {
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: var(--lila);
+  color: #51488d;
+}
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 800;
+  font-size: .95rem;
+}
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dcd9eb;
+  border-radius: 11px;
+  background: #fdfdff;
+  color: var(--texto);
+  font: inherit;
+  outline: none;
+  transition: border .2s, box-shadow .2s;
+}
+input:focus, textarea:focus {
+  border-color: #9388dc;
+  box-shadow: 0 0 0 3px rgba(117, 103, 200, .13);
+}
+textarea { resize: vertical; min-height: 82px; }
+button {
+  margin-top: 17px;
+  padding: 11px 21px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--primario);
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+button:hover { background: var(--primario-oscuro); transform: translateY(-1px); }
+a { color: var(--primario-oscuro); }
+main > section a { text-decoration: none; }
+#seccionEjemplos, #seccionTaller, #seccionReto { transition: transform .2s; }
+#seccionEjemplos:hover, #seccionTaller:hover, #seccionReto:hover { transform: translateY(-2px); }
+#seccionTaller li { margin: 9px 0; }
+#seccionTaller a, #seccionEjemplos a, #seccionReto a {
+  display: inline-block;
+  padding: 5px 0;
+  font-weight: 700;
+}
+strong { color: #51488d; }
+#resultado p:not(#mensaje) {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 9px 12px;
+  margin: 8px 0;
+  border-bottom: 1px solid var(--borde);
+}
+#resultado p strong { white-space: nowrap; }
+#listaNotas, #registro, #detalleDias, #detalleEmpleados, #listaTabla, #listaDado {
+  padding: 12px 18px;
+  background: #fff;
+  border-radius: 12px;
+}
+body > form { display: flex; flex-direction: column; }
+body > form label { margin-top: 9px; }
+@media (max-width: 600px) {
+  body { padding: 18px 12px 40px; }
+  header { padding: 23px 21px; border-radius: 17px; }
+  section, body > form, body > ul, body > p { padding: 20px 18px; border-radius: 15px; }
+  #resultado p:not(#mensaje) { align-items: flex-start; }
+}
